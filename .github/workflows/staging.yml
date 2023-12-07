@@ -17,8 +17,8 @@ jobs:
       - name: FTP Deploy to WP Engine (Staging)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          ftp-server: ftp.jimexs.org
-          ftp-username: f1sim-admin@f1sim.ca
-          ftp-password: ${{ secrets.F1SITE_FTP_PASSWORD }}
+          server: ftp.jimexs.org
+          username: f1sim-admin@f1sim.ca
+          password: ${{ secrets.F1SITE_FTP_PASSWORD }}
           # local-dir: ./f1sim_bootstrap/
           server-dir: DEV/
