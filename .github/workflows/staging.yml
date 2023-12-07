@@ -9,7 +9,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./f1sim_bootstrap/our-awesome-theme
+        working-directory: ./f1sim_bootstrap/
     steps:
       - uses: actions/checkout@v2
         with:
