@@ -1,1 +1,23 @@
+name: Staging Deploy
 
+on:
+  push:
+    branches: [dev-initial]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./f1sim_bootstrap/our-awesome-theme
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+      - name: FTP Deploy to WP Engine (Staging)
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ftp.jimexs.org
+          ftp-username: staginguser-deploy
+          ftp-password: ${{ secrets.F1SITE_FTP_PASSWORD }}
+          local-dir: ./f1sim_bootstrap/
