@@ -9,7 +9,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./f1sim_bootstrap/
+        working-directory: ./f1sim_bootstrap/assets/
     steps:
       - uses: actions/checkout@v2
         with:
@@ -20,5 +20,5 @@ jobs:
           ftp-server: ftp.jimexs.org
           ftp-username: f1sim-admin@f1sim.ca
           ftp-password: ${{ secrets.F1SITE_FTP_PASSWORD }}
-          local-dir: ./f1sim_bootstrap/assets/
+          local-dir: ./f1sim_bootstrap/
           server-dir: DEV/
