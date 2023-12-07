@@ -20,5 +20,5 @@ jobs:
           ftp-server: ftp.jimexs.org
           ftp-username: f1sim-admin@f1sim.ca
           ftp-password: ${{ secrets.F1SITE_FTP_PASSWORD }}
-          local-dir: ./assets/
+          local-dir: ./f1sim_bootstrap/assets/
           server-dir: DEV/
