@@ -9,16 +9,16 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./f1sim_bootstrap/assets/
+        # working-directory: ./f1sim_bootstrap/assets/
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 2
       - name: FTP Deploy to WP Engine (Staging)
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           ftp-server: ftp.jimexs.org
           ftp-username: f1sim-admin@f1sim.ca
           ftp-password: ${{ secrets.F1SITE_FTP_PASSWORD }}
-          local-dir: ./f1sim_bootstrap/
+          # local-dir: ./f1sim_bootstrap/
           server-dir: DEV/
